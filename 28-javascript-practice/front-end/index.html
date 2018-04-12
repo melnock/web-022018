@@ -2,10 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Secret Agent To Do List</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="src/index.js"></script>
 
   </head>
   <body>
-    <script src="src/index.js"></script>
+    <div class="header">
+      <header>
+        <h1>Welcome, Agent!</h1>
+        <h3>Here is your assignment, if you choose to accept it:</h3>
+      </header>
+    </div>
+    <div class="task-body">
+      <div id="task-list">
+
+      </div>
+      <hr>
+      <h3>Here are your completed assignments:</h3>
+
+      <div id="completed-task-list">
+
+      </div>
+      <div id="task-form">
+        <form class="create-new-task" id= "actual-task-form" action="index.html" method="post" hidden=true>
+          <label>Description of Task:</label>
+          <input type="text" name="task-description" placeholder="Write your task description here...">
+          <input type="text" name="task-priority" placeholder="How much should you prioritize this task?">
+          <input type="submit" id="submit-new-task">
+        </form>
+        <button type="button" id = "new-task-button" name="button">Press Here to Add a Task.</button>
+      </div>
+
+    </div>
+
+    <footer>This list will self-destruct in: <h1 id="countdown"></h1> </footer>
   </body>
 </html>
